@@ -45,6 +45,7 @@ body{
     color: var(--secondary);
     font-size: 1.2rem;
     padding-left: 1.2rem;
+    min-width: 150px;
 }
 .svg-over, .svg-over-active{
     display: flex;
@@ -117,6 +118,7 @@ svg{
     align-items: start;
     justify-content: start;
     flex-direction: column;
+    min-width: 4rem;
 }
 .side_barre .side_elt{
     cursor: pointer;
@@ -149,7 +151,7 @@ svg{
     width: 94%;
     height: 95%;
     display: grid;
-    grid-template-columns: repeat(4,minmax(30px, 12fr));
+    grid-template-columns: repeat(auto-fit,minmax(350px, 12fr));
     grid-auto-rows: 35%;
     gap: 1rem;
     padding: 1rem;
@@ -203,4 +205,21 @@ svg{
     color: gray;
     font-size: 1.2rem;
     text-align: left;
+}
+.res{
+    display: none !important;
+}
+
+@media screen and (max-width:767px) {
+    .profil{
+        display: none;
+    }
+    .search_container{
+        padding-left: 1rem;
+        padding-right:1rem ;
+        width: 60%;
+    }
+    .res{
+        display: flex !important;
+    }
 }
